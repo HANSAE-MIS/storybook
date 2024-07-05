@@ -7,14 +7,16 @@ interface TextInputProps {
     label: string;
     rounded?: boolean;
     disabled?: boolean;
+    onChangeEvent?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const CheckBox = ({id, label, rounded=false, disabled=false}: TextInputProps) => {
+export const CheckBox = ({id, label, rounded=false, disabled=false, onChangeEvent}: TextInputProps) => {
     
     const [ischeck, setIscheck] = useState(false);
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setIscheck((prev) => !prev);
+        onChangeEvent && onChangeEvent(e);
     }
 
     return (

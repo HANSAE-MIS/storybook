@@ -8,10 +8,10 @@ interface TextInputProps {
     field?: string,
     error?: boolean,
     errorMessage?: string,
-    onChange?: () => void;
+    onChangeEvent?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const TextInput = ({ field='text field', size='medium', error, errorMessage, lineType='outline', onChange}: TextInputProps) => {
+export const TextInput = ({ field='text field', size='medium', error, errorMessage, lineType='outline', onChangeEvent}: TextInputProps) => {
     
     const onFocus = (event: FocusEvent ) => {
         if(!error) {
@@ -24,7 +24,7 @@ export const TextInput = ({ field='text field', size='medium', error, errorMessa
     return (
         <div className='flex flex-col'>
         <div className={`text-[#000000] flex overflow-hidden ${size === 'medium' ? 'h-[34px] text-[14px]' : size === 'small' ? 'h-[26px] text-[13px]' : ''} ${lineType === 'underline' ? 'border-b border-black' : 'border border-[#B3B3B3] rounded-[3px]'} ${error ? '!border-[#EE3737]' : ''}`}>
-            <input type='text' className={`grow h-full w-full px-[10px] ${size === 'medium' ? 'py-[10px]' : size === 'small' ? 'py-[6.5px]' : ''}`} onChange={onChange} placeholder={field} onFocus={(event: any) => onFocus(event)}/>
+            <input type='text' className={`grow h-full w-full px-[10px] ${size === 'medium' ? 'py-[10px]' : size === 'small' ? 'py-[6.5px]' : ''}`} onChange={onChangeEvent ? onChangeEvent : () => {}} placeholder={field} onFocus={(event: any) => onFocus(event)}/>
             {error && <div className='h-full w-[26px] flex-none flex items-center justify-start'>
                 <div className='w-[13px] h-[13px] rounded-[16px] box-border border border-[#EE3737] text-[#EE3737] flex items-center justify-center text-[11px]'>
                     !

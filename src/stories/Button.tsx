@@ -30,6 +30,7 @@ export const Button = ({
   primary = false,
   size = 'medium',
   label,
+  onClick,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'bg-[#FFDF34]' : 'bg-white border-solid border-[1px] border-[#000]';
@@ -38,6 +39,7 @@ export const Button = ({
   return (
     <button
       type="button"
+      onClick={onClick}
       className={`box-border flex items-center justify-center rounded-[3px] ${mode} ${sizeClass}`}
       {...props}
     >
