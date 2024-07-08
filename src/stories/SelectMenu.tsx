@@ -46,7 +46,7 @@ export const SelectMenu = ({
 
     return (
         <div className='flex flex-col'>
-            <div className={`relative min-w-[240px] text-[#000000] flex overflow-hidden ${size === 'medium' ? 'h-[34px] text-[14px]' : size === 'small' ? 'h-[26px] text-[13px]' : ''} ${lineType === 'underline' ? 'border-b border-black' : 'border border-[#B3B3B3] rounded-[3px]'} ${error ? 'border-[#EE3737]' : ''}`} style={{width: width + 'px'}}>
+            <div className={`relative min-w-[240px] text-[#000000] flex overflow-hidden ${size === 'medium' ? 'h-[34px] text-[14px]' : size === 'small' ? 'h-[26px] text-[13px]' : ''} ${lineType === 'underline' ? 'border-b-[1px] border-black' : 'border border-[#B3B3B3] rounded-[3px]'} ${error ? 'border-[#EE3737]' : ''}`} style={{width: width + 'px'}}>
                 <select onChange={onChange} className='relative z-[2] w-full h-full box-border px-[10px] bg-transparent'>
                     {
                         options.map((list: OPTIONS_PROPS) => {
