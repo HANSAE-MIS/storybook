@@ -33,14 +33,14 @@ export const Button = ({
   onClick,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'bg-[#FFDF34]' : 'bg-white border-solid border-[1px] border-[#000]';
-  const sizeClass =  size === 'medium' ? 'px-[16px] py-[10px] h-[34px] text-[14px]' : size === 'small' ? 'px-[16px] py-[6px] h-[26px] text-[14px]' : size === 'large' ? 'px-[80px] py-[16px] h-[50px]' : 'px-[16px] py-[10px] h-[34px] text-[18px]';
+  const mode = primary ? 'storybook--primary--button' : 'storybook--secondary--button';
+  const sizeClass =  size === 'medium' ? 'storybook--secondary--medium' : size === 'small' ? 'storybook--secondary--small' : size === 'large' ? 'storybook--secondary--large ' : 'storybook--secondary--medium';
 
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`box-border flex items-center justify-center rounded-[3px] ${mode} ${sizeClass}`}
+      className={`storybook--button ${mode} ${sizeClass}`}
       {...props}
     >
       {label}

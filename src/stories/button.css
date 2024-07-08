@@ -1,30 +1,34 @@
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+.storybook--button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
 }
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+
+.storybook--primary--button {
+  background-color: #FFDF34;
 }
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+
+.storybook--secondary--button {
+  background-color: #ffffff;
+  border: 1px solid #000;
 }
-.storybook-button--small {
-  font-size: 12px;
+
+.storybook--secondary--medium {
   padding: 10px 16px;
-}
-.storybook-button--medium {
+  height: 34px;
   font-size: 14px;
-  padding: 11px 20px;
 }
-.storybook-button--large {
-  font-size: 16px;
-  padding: 12px 24px;
+
+.storybook--secondary--small {
+  padding: 6px 16px;
+  height: 26px;
+  font-size: 14px;
+}
+
+.storybook--secondary--large {
+  padding: 16px 80px;
+  height: 50px;
+  font-size: 14px;
 }
