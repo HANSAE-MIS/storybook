@@ -1,5 +1,5 @@
 import React from 'react';
-import './TextInput.css';
+import style from './SelectMenu.module.css';
 
 
 type OPTIONS_PROPS = {
@@ -45,9 +45,9 @@ export const SelectMenu = ({
     
 
     return (
-        <div className='flex flex-col'>
-            <div className={`relative min-w-[240px] text-[#000000] flex overflow-hidden ${size === 'medium' ? 'h-[34px] text-[14px]' : size === 'small' ? 'h-[26px] text-[13px]' : ''} ${lineType === 'underline' ? 'border-b-[1px] border-black' : 'border border-[#B3B3B3] rounded-[3px]'} ${error ? 'border-[#EE3737]' : ''}`} style={{width: width + 'px'}}>
-                <select onChange={onChange} className='relative z-[2] w-full h-full box-border px-[10px] bg-transparent'>
+        <div className={style.selectMenuWrap}>
+            <div className={`${style.selectMenu} ${size === 'medium' ? style.selectMenuMedium : size === 'small' ? style.selectMenuSmall : ''} ${lineType === 'underline' ? style.selectMenuUnderline : style.selectMenuOutline} ${error && style.selectMenuError}`} style={{width: width + 'px'}}>
+                <select onChange={onChange} className={style.selectMenuTag}>
                     {
                         options.map((list: OPTIONS_PROPS) => {
                             return (

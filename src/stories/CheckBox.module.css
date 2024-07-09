@@ -1,0 +1,35 @@
+.checkbox {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #B3B3B3;
+    margin-right: 10px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+.checkboxInput {
+    display: none;
+}
+.checkboxIscheck {
+    border-color: #FFDF34;
+    background-color: #FFDF34;
+}
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+}
+
+.checkboxRounded {
+    border-radius: 16px;
+}
+
+.checkboxDisabled {
+    background-color: #E5E5E5;
+    border-color: #B3B3B3 !important;
+}
+
+.checkboxLabelDisabled {
+    color: #B3B3B3;
+}

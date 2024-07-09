@@ -1,0 +1,55 @@
+.selectMenuWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.selectMenu {
+    position: relative;
+    min-width: 240px;
+    color: #000000;
+    display: flex;
+    overflow: hidden;
+    outline: none;
+    border:none;
+	border-radius:0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #b3b3b3;
+}
+.selectMenuTag {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: transparent;
+    outline: none;
+    border:none;
+	border-radius:0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.selectMenuMedium {
+    height: 34px;
+    font-size: 14px;
+}
+
+.selectMenuSmall {
+    height: 26px;
+    font-size: 13px;
+}
+
+.selectMenuUnderline {
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.selectMenuError {
+    border-color: #EE3737;
+}

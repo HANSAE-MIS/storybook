@@ -1,0 +1,35 @@
+.radioButtonLabel {
+    display: flex;
+    align-items: center;
+}
+
+.radioButtonCheckDefault {
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    margin-right: 10px;
+    background-color: #fff;
+    border-color: #B3B3B3;
+}
+.radioButtonIsChecked {
+    background-color: #FFDF34;
+    border-color: #FFDF34;
+}
+.radioButtonDisabled {
+    background-color: #E5E5E5;
+    border-color: #B3B3B3 !important;
+}
+
+.radiobuttonCheckedIcon {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #000;
+}
+.radioButtonLabelCnt {
+    color: #B3B3B3;
+}

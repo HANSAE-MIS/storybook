@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './TextArea.css';
+import style from './CheckBox.module.css'
 
 
 interface TextInputProps {
@@ -21,14 +21,14 @@ export const CheckBox = ({id, label, rounded=false, disabled=false, onChangeEven
 
     return (
         <div>
-            <input id={id} type="checkbox" name={id} value="scales" className='hidden' onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            <input id={id} type="checkbox" name={id} value="scales" className='checkboxInput' onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 onChange(e);
             }} checked={ischeck} disabled={disabled}/>
-            <label htmlFor={id} className='flex items-center'>
-                <div className={`w-[16px] h-[16px] flex items-center justify-center border-[1px] mr-[10px] ${ischeck ? 'border-[#FFDF34] bg-[#FFDF34]' : 'border-[#B3B3B3] bg-white'} ${rounded ? 'rounded-[16px]' : 'rounded-[2px]'} ${disabled && 'bg-[#E5E5E5] !border-[#B3B3B3]'}`}>
-                        {ischeck && <img src={`${process.env.PUBLIC_URL}/icon/check.png`} alt="checkbox icon" />}
+            <label htmlFor={id} className='checkboxLabel'>
+                <div className={`${style.checkbox} ${ischeck ? style.checkboxIscheck : ''} ${rounded ? style.checkboxRounded : ''} ${disabled && style.checkboxDisabled}`}>
+                        {ischeck && !disabled && <img src={`${process.env.PUBLIC_URL}/icon/check.png`} alt="checkbox icon" />}
                 </div>
-                <span className={disabled ? 'text-[#B3B3B3]' : 'text-black'}>{label}</span>
+                <span className={disabled ? style.checkboxLabelDisabled : ''}>{label}</span>
             </label>
         </div>
     )    
