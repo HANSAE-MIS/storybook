@@ -1,6 +1,6 @@
 {
   "name": "@hansaemis/hansaedesign",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "dependencies": {
     "@storybook/addon-styling-webpack": "^1.0.0",
