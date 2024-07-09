@@ -21,10 +21,10 @@ export const CheckBox = ({id, label, rounded=false, disabled=false, onChangeEven
 
     return (
         <div>
-            <input id={id} type="checkbox" name={id} value="scales" className='checkboxInput' onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            <input id={id} type="checkbox" name={id} value="scales" className={style.checkboxInput} onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 onChange(e);
             }} checked={ischeck} disabled={disabled}/>
-            <label htmlFor={id} className='checkboxLabel'>
+            <label htmlFor={id} className={style.checkboxLabel}>
                 <div className={`${style.checkbox} ${ischeck ? style.checkboxIscheck : ''} ${rounded ? style.checkboxRounded : ''} ${disabled && style.checkboxDisabled}`}>
                         {ischeck && !disabled && <img src={`${process.env.PUBLIC_URL}/icon/check.png`} alt="checkbox icon" />}
                 </div>

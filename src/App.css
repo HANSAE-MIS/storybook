@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'SUIT', sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -44,3 +47,31 @@ button{
     transform: rotate(360deg);
   }
 }
+
+
+h1 {
+  font-size: 50px;
+  font-weight: 'SemiBold';
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 'SemiBold';
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 'Bold';
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 'Bold';
+}
+
+h5 {
+  font-size: 22px;
+  font-weight: 'ExtraBold';
+}
+
+
