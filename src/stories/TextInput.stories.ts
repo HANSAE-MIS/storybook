@@ -16,9 +16,14 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const onChangeEvent = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event)
+}
+
 export const TextInputType: Story = {
     args: {
         size: 'small',
-        lineType: 'outline'
+        lineType: 'outline',
+        onChangeEvent: onChangeEvent
     },
 };

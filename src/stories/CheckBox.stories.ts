@@ -16,13 +16,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const onChangeEvent = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e);
+}
 
 
-
-export const CheckBoxType: Story = {
+export const CheckboxType: Story = {
     args: {
         id: 'name',
         label: 'name',
-        disabled: false
+        disabled: false,
+        onChangeEvent: onChangeEvent
     },
 };

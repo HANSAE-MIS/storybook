@@ -20,7 +20,7 @@ interface ButtonProps {
   /**
    * Optional click handler
    */
-  onClick?: () => void;
+  onClickEvent?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 /**
@@ -30,16 +30,21 @@ export const Button = ({
   primary = false,
   size = 'medium',
   label,
-  onClick,
+  onClickEvent,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook--primary--button' : 'storybook--secondary--button';
   const sizeClass =  size === 'medium' ? 'storybook--secondary--medium' : size === 'small' ? 'storybook--secondary--small' : size === 'large' ? 'storybook--secondary--large ' : 'storybook--secondary--medium';
 
+  const onClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    onClickEvent && onClickEvent(event)
+  }
+
+
   return (
     <button
       type="button"
-      onClick={onClick}
+      onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => onClick(event)}
       className={`storybook--button ${mode} ${sizeClass}`}
       {...props}
     >

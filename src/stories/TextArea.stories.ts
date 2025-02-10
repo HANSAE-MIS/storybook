@@ -16,9 +16,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+
+
+const onChangeEvent = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    console.log("event", event)
+}
+
 export const TextAreaType: Story = {
     args: {
         size: 'small',
-        setDisabled: false
+        setDisabled: false,
+        onChangeEvent: onChangeEvent
     },
 };

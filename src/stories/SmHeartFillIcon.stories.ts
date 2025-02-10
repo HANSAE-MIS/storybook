@@ -19,7 +19,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const SmHeartFillIconType: Story = {
+export const SmallHeartFillIcon: Story = {
   args: {
     color: '#FFDF34'
   },

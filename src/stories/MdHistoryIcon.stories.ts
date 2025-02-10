@@ -18,7 +18,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const MdHistoryIconType: Story = {
+export const MediumHistoryIcon: Story = {
   args: {
     color: '#000'
   },

@@ -36,10 +36,15 @@ const options = [
     }
 ]
 
+const onChangeEvent = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e);
+}
+
 
 export const RadioButtonType: Story = {
     args: {
         disabled: options[0].value,
-        options: options
+        options: options,
+        onChangeEvent: onChangeEvent
     },
 };

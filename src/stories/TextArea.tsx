@@ -28,7 +28,7 @@ export const TextArea = ({ width=320, field='text field', size='medium', error, 
             {setDisabled ?
                 <textarea className={style.textAreaTag} name="" id="" onFocus={(event: any) => onFocus(event)} disabled onChange={onChangeEvent ? (event: React.ChangeEvent<HTMLTextAreaElement>) => onChangeEvent(event) : () => {}}></textarea>
                 :
-                <textarea className={style.textAreaTag} name="" id="" onFocus={(event: any) => onFocus(event)}></textarea>
+                <textarea className={style.textAreaTag} name="" id="" onFocus={(event: any) => onFocus(event)} onChange={onChangeEvent ? (event: React.ChangeEvent<HTMLTextAreaElement>) => onChangeEvent(event) : () => {}}></textarea>
             }
         </div>
         {errorMessage && error && <div className='text-[10px] text-[#EE3737] pt-[6px]'>{errorMessage}</div>}

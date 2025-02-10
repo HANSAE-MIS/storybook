@@ -16,7 +16,7 @@ interface SelectMenuProps {
     field?: string,
     error?: boolean,
     errorMessage?: string,
-    onChange?: () => void;
+    onChangeEvent?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 export const SelectMenu = ({ 
@@ -40,14 +40,18 @@ export const SelectMenu = ({
     error, 
     errorMessage, 
     lineType='outline', 
-    onChange
+    onChangeEvent
 }: SelectMenuProps) => {
+
+    const onChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        onChangeEvent && onChangeEvent(e);
+    }
     
 
     return (
         <div className={style.selectMenuWrap}>
             <div className={`${style.selectMenu} ${size === 'medium' ? style.selectMenuMedium : size === 'small' ? style.selectMenuSmall : ''} ${lineType === 'underline' ? style.selectMenuUnderline : style.selectMenuOutline} ${error && style.selectMenuError}`} style={{width: width + 'px'}}>
-                <select onChange={onChange} className={style.selectMenuTag}>
+                <select onChange={(e: React.ChangeEvent<HTMLSelectElement>) => onChange(e)} className={style.selectMenuTag}>
                     {
                         options.map((list: OPTIONS_PROPS) => {
                             return (

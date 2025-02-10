@@ -15,6 +15,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const onChangeEvent = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    console.log(e);
+}
+
+
 export const SelectMenuType: Story = {
     args: {
         size: 'small',
@@ -32,6 +37,7 @@ export const SelectMenuType: Story = {
                 name: 'option3',
                 value: 'option3'
             }
-        ]
+        ],
+        onChangeEvent: onChangeEvent
     },
 };
