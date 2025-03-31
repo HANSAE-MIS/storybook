@@ -1,6 +1,6 @@
 {
   "name": "@HANSAE-MIS/storybook",
-  "version": "0.1.9",
+  "version": "0.1.8",
   "private": false,
   "dependencies": {
     "@storybook/addon-styling-webpack": "^1.0.0",

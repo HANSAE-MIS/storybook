@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// 수정
 interface ButtonProps {
   color?: string;
 }
