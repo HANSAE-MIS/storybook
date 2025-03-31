@@ -1,5 +1,5 @@
 {
-  "name": "@HANSAE-MIS/storybook",
+  "name": "@hansae-mis/storybook",
   "version": "0.1.4",
   "private": false,
   "dependencies": {
@@ -77,9 +77,9 @@
     "webpack": "^5.92.1"
   },
   "publishConfig": {
-    "@HANSAE-MIS:registry": "https://npm.pkg.github.com"
+    "@hansae-mis:registry": "https://npm.pkg.github.com"
   },
-  "main": "index.js",
+  "main": "index.ts",
   "repository": "https://github.com/HANSAE-MIS/storybook.git",
   "author": "HANSAE-MIS <mis@hansae.com>",
   "license": "MIT"
