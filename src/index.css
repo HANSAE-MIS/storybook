@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* input 기본 스타일 초기화 */
+input { 
+  -webkit-appearance : none;
+  -moz-appearance:none;  
+  appearance:none;
+  outline: none;
+  display: inline-block;
+}
+  
+  
+/* input type number 에서 화살표 제거 */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-out-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance:none;
+  appearance:none;
+}
+
+/* select box 스타일 초기화 */  
+select {
+  -webkit-appearance: none;
+  -moz-appearance:none;
+  appearance:none;
+}
+  
+/*Firefox에서 input number 화살표 없애는 방법*/    
+input[type=number]{
+  -webkit-appearance: none;
+  -mox-appearance: none;
+  appearance: none;
+}
+  
+  
+/* input number의 외형을 텍스트필드로 바꿔줘야한다 */
+input[type=number] {
+  -moz-appearance:textfield; 
+}
+
+
+input[type=text]:focus:has(div) {
+ border-color: yellow;
+}
+
+
+select {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+  outline: none;
+  border: none;
+}
+
+/* IE 에서 Select box 화살표 제거 */ 
+select::-ms-expand {
+display: none;
+}
+

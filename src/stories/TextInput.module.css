@@ -1,0 +1,74 @@
+.textInputWrap {
+    display: flex;
+    flex-direction: column;
+}
+.textInputWrapChild {
+    color: #000;
+    display: flex;
+    overflow: hidden;
+}
+
+.textInputMedium {
+    height: 34px;
+    font-size: 14px;
+}
+
+.textInputSmall {
+    height: 26px;
+    font-size: 13px;
+}
+
+.textInputUnderline {
+    border-bottom: 1px solid #000;
+}
+
+.textInputOutline {
+    border: 1px solid #B3B3B3;
+    border-radius: 3px;
+}
+
+.textInputError {
+    border-color: #EE3737 !important;
+}
+
+
+.textInputTag {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-shrink: 1;
+}
+.textInputTag:focus {
+    outline: none;
+}
+.textInputTagMedium {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.textInputTagSmall {
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+}
+
+.textInputErrorWrap {
+    height: 100%;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textInputErrorWrapIcon {
+    width: 13px;
+    height: 13px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    border: 1px solid #EE3737;
+    color: #EE3737;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}

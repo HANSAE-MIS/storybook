@@ -1,0 +1,29 @@
+name: package-deploy
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  publish-npm-registry:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          registry-url: https://npm.pkg.github.com/
+          scope: "@hansaemis/hansaedesign"
+      - run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
+      - run: npm run build
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
