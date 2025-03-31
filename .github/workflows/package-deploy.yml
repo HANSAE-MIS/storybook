@@ -21,8 +21,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
       - run: npm run build
-      - run: npm run build:tsc
-      - run: mv ./index.ts ./index.d.ts
+      - run: mv ./index.ts
       - run: rm -rf ./src
       - run: rm -rf ./public
       - run: rm -rf ./.github
