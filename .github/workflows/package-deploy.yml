@@ -2,6 +2,8 @@ name: package-deploy
 
 on:
   push:
+    branches:
+      - master
     tags:
       - v*
 
@@ -19,7 +21,7 @@ jobs:
         with:
           node-version: "18.x"
           registry-url: https://npm.pkg.github.com/
-          scope: "@hansaemis/hansaedesign"
+          scope: "@HANSAE-MIS"
       - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{secrets.GH_TOKEN}}
